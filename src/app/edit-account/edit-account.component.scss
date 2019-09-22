@@ -1,0 +1,70 @@
+.dashboard{
+    font-family: 'Poiret One', cursive;
+    background: rgb(239, 238, 238);
+    padding: 35px;
+    }
+    
+    .dashboard h1{
+        text-align: center;
+        font-size: 28px;
+    }
+    .dashboard h4{
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    .dashboard .section{
+        padding: 10px;
+    }
+    .dashboard p{
+        color: rgb(56, 56, 56);
+        line-height: 25px;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: Josefin Sans, sans-serif;
+    }
+    .dashboard .address{
+        width: 70%;
+        color:#222;
+        margin: 10px 8px;
+        font-weight: bold;
+    }
+    
+    .dashboard a{
+        font-weight: bold;
+        color: rgb(71, 144, 240);
+        margin-top: 10px;
+    }
+    .dashboard a :hover{
+       text-decoration: underline;
+    }
+    .add {
+        margin-top: 20px;
+    }
+
+    .change{
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    
+    .change:hover{
+       text-decoration: underline;
+    }
+    ::placeholder {
+        font-weight: bold;
+      }
+      form input{
+          width: 55%;
+          
+      }
+      @media(max-width:991px){
+        form input{
+            width: 70%;
+        } 
+      }
+      @media(max-width:420px){
+        form input{
+            width: 90%;
+        } 
+      }

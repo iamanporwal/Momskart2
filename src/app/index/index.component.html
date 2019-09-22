@@ -1,0 +1,345 @@
+<!-- Hero section -->
+<section class="hero-section">
+
+
+
+	<div id="demo" class="carousel slide " data-ride="carousel">
+
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+		</ul>
+
+		<!-- The slideshow -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="section demo-slide slide1">
+
+					<div class="col-xl-6 col-lg-7 slidecontent">
+						<h2>Sattur Garlic Seeval</h2>
+						<p>No Preservatives</p>
+						<!-- <a [routerLink]="['/prodesc',id1]" class="site-btn sb-line">DISCOVER</a> -->
+						<!-- <a href="#" class="site-btn sb-white">ADD TO CART</a> -->
+
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="section demo-slide slide2">
+
+					<div class="col-xl-6 col-lg-7 slidecontent">
+						<h2>Summer Essentials</h2>
+						<p>Refreshing Syrups</p>
+						<!-- <a [routerLink]="['/prodesc',id1]" class="site-btn sb-line">DISCOVER</a> -->
+						<!-- <a href="#" class="site-btn sb-white">ADD TO CART</a> -->
+
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="section demo-slide slide3">
+
+					<div class="col-xl-6 col-lg-7 slidecontent">
+						<h2> Bajra Lassan Bhakri</h2>
+						<p>From Jamnagar</p>
+						<!-- <a [routerLink]="['/prodesc',id1]" class="site-btn sb-line">DISCOVER</a> -->
+						<!-- <a href="#" class="site-btn sb-white">ADD TO CART</a> -->
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#demo" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+
+	</div>
+</section>
+<!-- Hero section end -->
+
+<!-- Features section -->
+<section class="features-section">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 p-0 feature">
+				<div class="feature-inner">
+					<div class="feature-icon">
+						<img src="assets/icons/1.png" alt="#">
+					</div>
+					<h2>No minimum Order</h2>
+				</div>
+			</div>
+			<div class="col-md-4 p-0 feature">
+				<div class="feature-inner">
+					<div class="feature-icon">
+						<img src="assets/icons/2.png" alt="#">
+					</div>
+					<h2>Purely Handmade by moms of India
+					</h2>
+				</div>
+			</div>
+			<div class="col-md-4 p-0 feature">
+				<div class="feature-inner">
+					<div class="feature-icon">
+						<img src="assets/icons/3.png" alt="#">
+					</div>
+					<h2>Any where in India at Rs 25
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Features section end -->
+<div class="hr"><img src="assets/hr.png" class="hr"></div>
+
+<section class="">
+	<div class="container">
+		<div class="section-title">
+			<h2>Momskart's Collection</h2>
+		</div>
+		<br>
+		<br>
+		<!-- <div class="hr"><img src="assets/hr.png" class="hr"></div> -->
+		<div class="row">
+			<div class="col-md-3 pointer" routerLink="/categorypage/18/10">
+				<img src="../../assets/collection/Diwali-Faral-FDA-featured-image-e1508583665527.jpg" width="100%"
+					height="100%" alt="">
+				<span>
+					<p class="set-collection-name">Snacks</p>
+				</span>
+			</div>
+			<div class="col-md-3 pointer" routerLink="/categorypage/16/9">
+				<img src="../../assets/collection/sweets-png--1800.jpg" width="100%" height="100%" alt="">
+				<span>
+					<p class="set-collection-name">Sweets</p>
+				</span>
+			</div>
+			<div class="col-md-3 pointer" routerLink="/categorypage/19/20">
+				<img src="../../assets/collection/too-much-garam-masala.jpg" width="100%" height="100%" alt="">
+				<span>
+					<p class="set-collection-name">Masale</p>
+				</span>
+			</div>
+			<div class="col-md-3 pointer" routerLink="">
+				<img src="../../assets/collection/images.jpg" width="100%" height="100%" alt="">
+				<span>
+					<p class="set-collection-name">Handmade Chocolates</p>
+				</span>
+			</div>
+		</div>
+	</div>
+</section>
+<br>
+<div class="hr"><img src="assets/hr.png" class="hr"></div>
+<!-- letest product section -->
+<!-- <section class="top-letest-product-section"> -->
+<section>
+	<div class="container">
+		<div class="section-title">
+			<h2>Current Bestsellers</h2>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-lg-3 col-md-6 col-sm-6 col-sm-6" *ngFor="let item of list |slice:2">
+				<div class="product-item">
+					<div class="pi-pic">
+						<a [routerLink]="['/prodesc',item.id]"><img src={{item.image1}} alt=""> </a>
+						<div class="pi-links">
+							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+						</div>
+					</div>
+					<div class="pi-text">
+						<h6><span> &#x20b9;</span>{{item.price}}</h6>
+						<a [routerLink]="['/prodesc',item.product_id_PK]">
+							<p>{{item.title}}</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="text-center pt-5">
+			<a routerLink="/categorypage/16/9"><button class="site-btn sb-line sb-dark">LOAD MORE</button></a>
+		</div>
+	</div>
+</section>
+<!-- letest product section end -->
+<div class="hr"><img src="assets/hr.png" class="hr"></div>
+
+<!-- Product filter section -->
+
+
+<section class="new-addition">
+	<div class="container">
+
+		<div class="section-title">
+			<h2>New Additions</h2>
+		</div>
+		<BR><BR>
+		<div class="row">
+			<!-- <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6" *ngFor="let item of list |slice:4"> -->
+			<div class="col-lg-3 col-md-6 col-sm-6 col-sm-6" *ngFor="let item of newAddition">
+				<div class="product-item">
+					<div class="pi-pic">
+						<div class="tag-new">NEW</div>
+						<a [routerLink]="['/prodesc',item.category_id_PK]"><img src={{item.logo}} alt=""> </a>
+						<div class="pi-links">
+							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+							<!-- <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a> -->
+						</div>
+					</div>
+					<div class="pi-text">
+						<!-- <h6><span> &#x20b9;</span>{{item.price}}</h6> -->
+						<a [routerLink]="['/prodesc',item.id]">
+							<p style="text-align:center">{{item.name}}</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="hr"><img src="assets/hr.png" class="hr"></div>
+
+<section class="product-filter-section">
+	<div class="container">
+		<div class="section-title">
+			<h2>Discover Greats Food From Moms All Over Country</h2>
+		</div>
+		<br>
+		<br>
+		<div class="row product-filter-menu">
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="assets/1.png" alt="" class="img-fluid">
+				<li><a href="#">(Indore)</a></li>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="assets/2.jpg" alt="" class="img-fluid">
+				<li><a href="#"> (Ahemabad)
+					</a></li>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="assets/3.jpg" alt="" class="img-fluid">
+				<li><a href="#"> (Jaipur)
+					</a></li>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="assets/4.jpg" alt="" class="img-fluid">
+				<li><a href="#">(Assam)
+					</a></li>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="assets/1.png" alt="" class="img-fluid">
+				<li><a href="#">(Delhi)</a></li>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="assets/2.jpg" alt="" class="img-fluid">
+				<li><a href="#"> (Kerla)
+					</a></li>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="assets/3.jpg" alt="" class="img-fluid">
+				<li><a href="#"> (Kolkata)
+					</a></li>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="assets/4.jpg" alt="" class="img-fluid">
+				<li><a href="#">(Mumnai)
+					</a></li>
+			</div>
+		</div>
+
+
+
+	</div>
+</section>
+
+
+<div class="hr"><img src="assets/hr.png" class="hr"></div>
+
+<section class="banner-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<a href="#">
+						<div class="banner1"></div>
+					</a>
+				</div>
+				<div class="col-md-6">
+					<a href="#">
+						<div class="banner2"></div>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<a href="#">
+						<div class="banner2"></div>
+					</a>
+				</div>
+				<div class="col-md-6">
+					<a href="#">
+						<div class="banner1"></div>
+					</a>
+				</div>
+			</div>
+	
+		</div>
+	</section>
+	<div class="hr"><img src="assets/hr.png" class="hr"></div>
+
+<!-- <section class="exclusive">
+	<div class="container">
+
+		<div class="section-title">
+			<h2>Exclusive Products</h2>
+		</div>
+		<BR><BR><BR>
+		<div class="row">
+			<div class="col-lg-3 col-md-6 col-sm-6 col-sm-6" *ngFor="let item of list |slice:4">
+				<div class="product-item">
+					<div class="pi-pic">
+						<a [routerLink]="['/prodesc',item.id]"><img src={{item.image1}} alt=""> </a>
+						<div class="pi-links">
+							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+						</div>
+					</div>
+					<div class="pi-text">
+						<h6><span> &#x20b9;</span>{{item.price}}</h6>
+						<a [routerLink]="['/prodesc',item.id]">
+							<p>{{item.title}}</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hr"><img src="assets/hr.png" class="hr"></div>
+
+		<div class="text-center pt-5">
+			<a [routerLink]="['/categorypage']"><button class="site-btn sb-line sb-dark">LOAD MORE</button></a>
+		</div>
+	</div>
+</section> -->
+<!-- Product filter section end -->
+
+<!-- Banner section -->
+<!-- <section class="banner-section">
+	<div class="container">
+		<div class="banner3">
+			<div class="tag-new">NEW</div>
+			<span>New Arrivals</span>
+			<a href="#" class="site-btn">SHOP NOW</a>
+		</div>
+	</div>
+</section> -->
+<!-- Banner section end  -->

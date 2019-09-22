@@ -1,0 +1,55 @@
+.mynavbar{
+    background-color: #2D2B2B !important;
+}
+
+.mynavinner ul li{
+    margin: 0 15px;
+}
+.mynavinner ul li a:hover{
+color: #EC1946 !important;
+
+}
+
+.dropdown-menu{
+    border: none;
+    border-radius: none !important;
+    -webkit-box-shadow: 7px 9px 18px -12px rgba(28,28,28,1);
+-moz-box-shadow: 7px 9px 18px -12px rgba(28,28,28,1);
+box-shadow: 7px 9px 18px -12px rgba(28,28,28,1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    -webkit-animation: moveFromTop 200ms ease-in-out;
+    -moz-animation: moveFromTop 200ms ease-in-out;
+    -ms-animation: moveFromTop 200ms ease-in-out;
+    -o-animation: moveFromTop 200ms ease-in-out;
+    animation: moveFromTop 200ms ease-in-out;
+  }
+@keyframes moveFromTop {
+    from {
+        opacity: 0.4;
+        -webkit-transform: translateY(10%);
+        -moz-transform: translateY(10%);
+        -ms-transform: translateY(10%);
+        -o-transform: translateY(10%);
+        transform: translateY(10%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+}
+
+  @media only screen and (max-width: 479px){
+
+
+  }
+  .panel-icons img{
+    width: 20px;
+    margin-top: -6px;
+  }

@@ -1,0 +1,105 @@
+<!-- Header section -->
+<header class="header-section">
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 momskart-logo-wrap">
+          <!-- logo -->
+          <a routerLink="/" class="site-logo">
+            <img src="assets/logo.jpg" alt="">
+            <!-- <span style="text-decoration: none;color:#eb1845;font-size: 28px;margin-top:40px; margin-left:15px;font-family: 'Times New Roman', Times, serif;font-weight: 600">Moms<span style="color:#2c246d">Kart</span> </span> -->
+          </a>
+
+          <div class="user-panel user-panel-mobile">
+            <div class="up-item">
+              <span class="panel-icons" *ngIf="userData?.name && userData?.profile_pic">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+                <!-- <img src="{{userData?.profile_pic}}"> -->
+                  Welcome {{userData?.name}}
+                <br />
+                <a style="cursor: pointer" (click)="logout()">Logout</a>
+              </span>
+              <!-- <i style="padding-right: 9px;" class="fa fa-user-o" aria-hidden="true"></i> -->
+               <a style="cursor: pointer" data-toggle="modal" data-target="#myModal" *ngIf="!userData" #loginButton>Log In & SignUp </a>
+            </div>
+            <div class="up-item">
+              <div class="shopping-card">
+                <span class="panel-icons"><img src="assets/icons/cart.png"></span>
+                <span class="cart-count">{{cartItemCount}}</span>
+              </div>
+              <a [routerLink]="['/cart']" style="margin-left: 10px;">Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6  searchbar">
+          <form class="header-search-form" >
+            <input type="text" placeholder="Search on MomsKart ....">
+            <button type="submit"><i class="flaticon-search" (mousedown)="$event.preventDefault()"></i></button>
+          </form>
+        </div>
+        <div class="col-lg-4 text-right">
+          <div class="user-panel user-panel-desktop">
+            <div class="up-item">
+              <span class="panel-icons" *ngIf="userData?.name && userData?.profile_pic">
+                <!-- <img src="{{userData?.profile_pic}}"> -->
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+                <span [routerLink]="['/dashboard']">
+                  Welcome {{userData?.name}}
+                </span>
+                <br />
+                <a style="cursor: pointer" (click)="logout()">Logout</a>
+              </span>
+              <!-- <i style="padding-right: 9px;" class="fa fa-user-o" aria-hidden="true"></i> -->
+                <a style="cursor: pointer" data-toggle="modal" data-target="#myModal" *ngIf="!userData" #loginButton>Log In & SignUp </a>
+            </div>
+            <div class="up-item">
+              <div class="shopping-card">
+                <span class="panel-icons"><img src="assets/icons/cart.png"></span>
+                <span class="cart-count">{{cartItemCount}}</span>
+              </div>
+              <a [routerLink]="['/cart']" style="margin-left: 10px;">Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mynavbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse mynavinner" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" style="margin:auto;">
+        <div>
+          <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </div>        
+        <div *ngFor="let menuItem of menuItems">
+          <li class="nav-item dropdown" *ngIf="menuItem.cat_list.length > 0">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {{menuItem.name}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" *ngFor="let category of menuItem.cat_list"
+               [routerLink]="['/categorypage/' + menuItem.category_id_PK + '/' + category.category_id_PK]">{{category.name}}</a>
+            </div>
+          </li>
+          <li class="nav-item" *ngIf="menuItem.cat_list.length === 0">
+            <a class="nav-link" [routerLink]="['/categorypage/' + menuItem.category_id_PK + '/0']">{{menuItem.name}}</a>
+          </li>
+        </div>
+        <div>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/blogs']">Blog</a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<app-login-signup-model (eventEmitter)="performAction($event)"></app-login-signup-model>

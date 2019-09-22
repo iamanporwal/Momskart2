@@ -1,0 +1,51 @@
+.payment{
+    background: #efeeee;;
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 25px;
+}
+.box{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    margin: 10px;
+}
+h1{
+font-family: Poiret One, cursive;
+font-size: 38px;
+text-transform: capitalize;
+}
+.box img{
+    height: 50px;;
+}
+.image{
+    width: 30%;
+    margin: 25px auto;
+}
+span{
+    font-size: 28px;
+    margin-left: 15px;
+}
+a{
+    font-weight: bold;
+    color: #4790f0;
+    margin-top: 10px;
+    display: block;
+    margin-top: 35px;
+    font-size: 16px;
+}
+@media (max-width:991px){
+    .payment{
+        width: 80%;
+    }
+}
+@media (max-width:479px){
+    .payment{
+        width: 100%;
+    }
+    .image{
+        width: 50%;
+        margin: 30px auto;
+    }
+}

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Poiret+One|Shadows+Into+Light+Two');
+
+
+.demo-slide{
+    width: 100%;
+    height: 50vh;
+   text-align: center !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10vh;
+}
+
+.features-section{
+    border: 1px solid black;
+    /* margin: 8vh; */
+    margin-top: 4vh;
+    margin-left: 8vh;
+    margin-right: 8vh;
+}
+.slide1{
+    background: url('./img/banner1.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide2{
+    background: url('./img/banner2.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide3{
+    background: url('./img/banner3.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.demo-slide h2{
+    font-size: 50px;
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-weight: lighter;
+    margin:0 auto;
+      
+
+}
+
+.slidecontent{
+    text-align: center !important;
+    margin: auto;
+}
+.hr{
+   text-align: center !important;
+}
+.hr img{
+    opacity: 0.4;
+}
+.demo-slide p{
+    font-size: 30px;
+    font-family: 'Poiret One', cursive;
+    color: white;
+    font-weight: bold;
+}
+
+.site-btn{
+    margin:10px;
+}
+
+.banner1{
+    background:url('./img/banner-bg.jpg');
+    height: 30vh;
+    margin:1%;
+    background-size: cover;
+}
+.banner2{
+    background:url('./img/banner-bg2.jpg');
+    height: 30vh;
+    margin:2%;
+    background-size: cover;
+}
+.banner3{
+    background: url('./img/banner3.jpeg');
+    background-size: cover;
+    background-position:center;
+    padding: 50px 34px 47px;
+    position: relative;
+    margin-bottom: 70px;
+    
+}
+.banner3 .tag-new {
+    position: absolute;
+    right: 26px;
+    top: 27px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    background: #50e550;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 7px 16px 1px;
+    border-radius: 80px;
+}
+.banner3 span {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    display: block;
+    color: white;
+}
+
+@media only screen and (max-width: 479px){
+
+    .searchbar{
+        margin-top: -65px !important;
+    }
+    .banner1{
+        height: 15vh;
+        margin:1%;
+    }
+    .banner2{
+        height: 15vh;
+        margin:1%;
+    }
+    .demo-slide{
+        height: 50vh;
+        padding: 8vh;
+    }
+    .demo-slide p{
+        font-size: 25px;
+    margin-bottom: 12px;
+    }
+    .demo-slide h2{
+        font-size: 35px;
+    }
+    .lastban{
+        height: 30vh;
+    }
+    .hr img{
+        opacity: 0.4;
+        width: 80%;
+    }
+    .features-section{
+        border: none;
+        /* margin: 8vh; */
+        margin:1vh;
+    }
+   
+}
+
+
+/*.active .offer-card{
+opacity: 1;
+-webkit-transform: rotate(0deg);
+-ms-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: all 0.5s ease 1s;
+-webkit-transition: all 0.5s ease 1s;
+-o-transition: all 0.5s ease 1s;
+transition: all 0.5s ease 1s;
+}
+.offer-card{
+    position: absolute;
+    right: 0;
+    top: 226px;
+    width: 162px;
+    height: 162px;
+    border-radius: 50%;
+    background: #f51167;
+    text-align: center;
+    padding-top: 20px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
+}*/
+
+.hero-section{
+    margin-top: 6px;
+}
+
+.set-collection-name {
+    font-size: 16px !important;
+    color: #111111;
+    margin-bottom: 0;
+    text-align: center;
+    padding-top: 5px;
+}

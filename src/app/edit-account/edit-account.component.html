@@ -1,0 +1,64 @@
+<!-- Page info -->
+
+  <!-- Page info end -->
+  
+  
+  <!-- Category section -->
+  <section class="category-section spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 order-2 order-lg-1">
+            <div class="filter-widget">
+              <h2 class="fw-title">Account Information</h2>
+              <h2 class="fw-title">Address Book</h2>
+              <h2 class="fw-title"><a [routerLink]="['/cart']">My Cart</a> </h2>
+              <h2 class="fw-title" ><a [routerLink]="['/dashboard']">Foodie Cash</a></h2>
+              <h2 class="fw-title"> <a [routerLink]="['/generalquery']">General Queries</a></h2>
+            </div>
+    
+          </div>
+    
+          <div class="col-lg-10  order-1 order-lg-2 mb-5 mb-lg-0">
+              <div class="dashboard">
+                  <div class="container">
+                    
+                        <h1>EDIT ACCOUNT INFORMATION</h1>
+                     <br><hr>
+                    
+                     <h4>Account Information  </h4>
+                     <hr>
+                     <div class="section">
+                      	<form [formGroup]="editAccountFrom" novalidate class="contact-form">
+                            <input type="text" formControlName="first_name" placeholder="First Name * " required>
+                            <input type="text" formControlName="last_name" placeholder="Last Name * " required>
+                            <input type="text" formControlName="email"  placeholder="Email * " required>
+                           
+                            <div (click) = "show()" class="change"> change password</div>
+                            <div *ngIf="showDiv">
+                               <br>
+                               <hr>
+                                <h4>Change Password  </h4>
+                              <hr>
+                              <input type="password" formControlName="current_password" placeholder="Current Password  * " required>
+                              <input type="password" formControlName="new_password" placeholder="New Password  * " required>
+                              <input type="password"  formControlName="confirm_passoword" placeholder="Confirm Password  * " required>
+                            </div>
+                            <br>
+                               <hr>
+                                <h4>CONTACT INFORMATION  </h4>
+                              <hr>
+                              <input type="number" formControlName="mobile_number" placeholder="Mobile Number * " required>
+<br><br>
+                            <button class="site-btn" (click)="accountUpdate()" >SAVE </button> 
+                            <a style="float: right;" [routerLink]="['/dashboard']"><<- BACK</a>
+                          </form>
+                          
+                  </div>
+                 </div>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Category section end -->

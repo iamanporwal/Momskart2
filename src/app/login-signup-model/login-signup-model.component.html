@@ -1,0 +1,72 @@
+<!--Modal: Login / Register Form-->
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <button type="button" class="cross-btn" data-dismiss="modal" #crossBtn>&times;</button>
+  <div class="modal-dialog " >
+    <!-- Modal content-->
+   
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container" id="container"></div>
+          <mat-tab-group>
+            <mat-tab label="LOGIN" class="active" style="font-weight: bold !important">
+              <ng-template matTabContent>
+                  <div class="login-box modal-box">
+                  <form [formGroup]="createLoginForm" #loginForm="ngForm" autocomplete="off" #loginForm (ngSubmit)="login()">
+                    <strong class="alert alert-danger" *ngIf="errorMsg">{{errorMsg}}</strong>
+                    <h1>LOGIN</h1>
+                    <input type="text" formControlName="email" placeholder="Email" />
+                    <div *ngIf="submitted && createLoginForm.invalid" class="red">
+                      <div *ngIf="createLoginForm.controls.email.errors?.required">Email is required</div>
+                    </div>
+                    <input type="password" formControlName="password" placeholder="Password" />
+                    <div *ngIf="submitted && createLoginForm.invalid" class="red">
+                      <div *ngIf="createLoginForm.controls.password.errors?.required">Password is required</div>
+                    </div>
+
+                    <a href="#" class="forgot-password">Forgot your password?</a>
+                    <button type="submit" (mousedown)="$event.preventDefault()"> LOGIN</button>
+                  </form>
+                  </div>
+               
+              </ng-template>
+            </mat-tab>
+            <mat-tab label="SIGN UP" class="active" style="font-weight: bold !important">
+              <ng-template matTabContent>
+                <div class="sign-up-box modal-box">
+                  <form [formGroup]="createSignupForm" autocomplete="off" novalidate>
+                    <strong class="alert alert-danger" *ngIf="signUpErrorMsg">{{signUpErrorMsg}}</strong>
+                    <strong class="alert alert-success" *ngIf="signUpSuccessMsg">{{signUpSuccessMsg}}</strong>
+                    <h1>Create Account</h1>
+                   
+                    <input type="text" formControlName="name" placeholder="Name" />
+                    <div *ngIf="submitted && createSignupForm.invalid" class="red">
+                      <div *ngIf="createSignupForm.controls.name.errors?.required">Name is required</div>
+                    </div>
+                    <input type="email" formControlName="email" placeholder="Email" />
+                    <div *ngIf="submitted && createSignupForm.invalid" class="red">
+                        <div *ngIf="createSignupForm.controls.email.errors?.required || createSignupForm.controls.email.errors?.pattern">Valid email id required</div>
+                    </div>
+                    <input type="number" formControlName="number" placeholder="Mobile No." />
+                    <div *ngIf="submitted && createSignupForm.invalid" class="red">
+                      <div *ngIf="createSignupForm.controls.number.errors?.required">Mobile No. is required</div>
+                    </div>
+                    <input type="password" formControlName="password" placeholder="Password" />
+                    <div *ngIf="submitted && createSignupForm.invalid" class="red">
+                      <div *ngIf="createSignupForm.controls.password.errors?.required">Password is required</div>
+                    </div>
+                    <!-- <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" /> -->
+                    <button type="submit" (click)="signUp()" (mousedown)="$event.preventDefault()">Sign Up</button>
+                   
+                    
+                     
+                  </form>
+                </div>
+              </ng-template>
+            </mat-tab>
+          </mat-tab-group>
+        
+      </div>
+    </div>
+  </div>
+</div>
